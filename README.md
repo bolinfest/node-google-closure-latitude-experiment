@@ -3,10 +3,8 @@ This is my first attempt to use Node with the Closure Library and Compiler.
 There are several other projects that are mainly focused on importing
 code from the Closure Library into Node, such as:
 
-https://github.com/gatapia/nclosure
-
-https://github.com/hsch/node-goog
-
+https://github.com/gatapia/nclosure  
+https://github.com/hsch/node-goog  
 https://github.com/lm1/node-closure
 
 These projects seem to focus on writing JavaScript in the style of Node,

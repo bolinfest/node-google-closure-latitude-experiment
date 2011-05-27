@@ -29,7 +29,7 @@ I have no idea whether Node or Google is to blame.
 
 To reproduce the problem, simply run:
 
-ant build run
+    ant build run
 
 And it will compile the JavaScript and run Node locally on port 1337.
 If you load http://localhost:1337/, you will see that the following is

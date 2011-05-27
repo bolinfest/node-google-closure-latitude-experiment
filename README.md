@@ -26,3 +26,18 @@ js/dab/glat/rpc.js is not working as expected: the 'end' event never fires,
 but a 'close' event does when trying to access the Google Latitude API.
 
 I have no idea whether Node or Google is to blame.
+
+To reproduce the problem, simply run:
+
+ant build run
+
+And it will compile the JavaScript and run Node locally on port 1337.
+If you load http://localhost:1337/, you will see that the following is
+printed to the console:
+
+     [exec] Server running locally on port 1337
+     [exec] sending via: close
+     [exec] sending via: close
+
+1. I don't know why hitting the URL in Chrome causes two requests.
+2. You can see that the 'close' event is fired rather than the 'end' event.

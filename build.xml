@@ -1,0 +1,28 @@
+<project name="nodegoo">
+
+  <!-- Ant may be ugly, but it's also cross-platform. -->
+
+  <property name="build.dir" value="${basedir}/build" />
+  
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+  
+  <target name="build">
+    <mkdir dir="${build.dir}" />
+    <java fork="true"
+          jar="${basedir}/plovr.jar"
+          failonerror="true"
+          output="${build.dir}/server.js"
+          error="${build.dir}/error.log">
+      <arg value="build" />
+      <arg value="${basedir}/config.js" />
+    </java>
+  </target>
+
+  <target name="run">
+    <exec executable="node">
+      <arg value="${build.dir}/server.js" />
+    </exec>
+  </target>
+</project>
